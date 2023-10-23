@@ -44,6 +44,14 @@ body {
   color: #fff;
 }
 
+.container > .item.refresh {
+  background: #111;
+}
+
+.container > .item.refresh > .item-fund {
+  color: gold;
+}
+
 @media print, screen and (max-width: 800px) {
   .container > .item {
     flex: 100%;

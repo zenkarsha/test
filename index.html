@@ -58,7 +58,7 @@
         $.getJSON(json_url, function(data) {
           $(`#item-${data.live_id}`).addClass('refresh');
           $(`#item-${data.live_id} .item-name`).text(data.user);
-          $(`#item-${data.live_id} .item-fund`).text(data.fund);
+          $(`#item-${data.live_id} .item-fund`).text(parseFloat(data.fund).toFixed(8));
 
           window.setTimeout( function() {
             $(`#item-${data.live_id}`).removeClass('refresh');

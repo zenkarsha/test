@@ -60,4 +60,13 @@ body {
   .container > .item:nth-child(2n) {
     border-left: none;
   }
+
+  .item-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .item-fund {
+    font-size: 36px;
+  }
 }

@@ -46,10 +46,16 @@ body {
 }
 
 .item-mode {
-  display: block;
   font-size: 18px;
   color: #999;
   margin-top: 10px;
+}
+
+.item-bets {
+  font-size: 18px;
+  color: #999;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .item-message {

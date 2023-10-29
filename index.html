@@ -14,25 +14,37 @@
       <div class="item flex" id="item-1">
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
-        <span class="item-mode">mode: <b>...</b></span>
+        <div>
+          <span class="item-mode">mode: <b>...</b></span>
+          <span class="item-bets">bets: <b>...</b></span>
+        </div>
         <span class="item-message"></span>
       </div>
       <div class="item flex" id="item-2">
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
-        <span class="item-mode">mode: <b>...</b></span>
+        <div>
+          <span class="item-mode">mode: <b>...</b></span>
+          <span class="item-bets">bets: <b>...</b></span>
+        </div>
         <span class="item-message"></span>
       </div>
       <div class="item flex" id="item-3">
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
-        <span class="item-mode">mode: <b>...</b></span>
+        <div>
+          <span class="item-mode">mode: <b>...</b></span>
+          <span class="item-bets">bets: <b>...</b></span>
+        </div>
         <span class="item-message"></span>
       </div>
       <div class="item flex" id="item-4">
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
-        <span class="item-mode">mode: <b>...</b></span>
+        <div>
+          <span class="item-mode">mode: <b>...</b></span>
+          <span class="item-bets">bets: <b>...</b></span>
+        </div>
         <span class="item-message"></span>
       </div>
     </div>
@@ -68,6 +80,7 @@
           $(`#item-${data.live_id} .item-name`).text(data.user);
           $(`#item-${data.live_id} .item-fund`).text(parseFloat(data.fund).toFixed(8));
           $(`#item-${data.live_id} .item-mode b`).text(data.mode_name);
+          $(`#item-${data.live_id} .item-bets b`).text(data.bet_count);
 
           if (data.message == '') {
             if ($(`#item-${data.live_id}`).hasClass('warning')) {

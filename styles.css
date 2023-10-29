@@ -46,12 +46,14 @@ body {
 }
 
 .item-mode {
+  display: inline-block;
   font-size: 18px;
   color: #999;
   margin-top: 10px;
 }
 
 .item-bets {
+  display: inline-block;
   font-size: 18px;
   color: #999;
   margin-top: 10px;
@@ -96,7 +98,8 @@ body {
     font-size: 36px;
   }
 
-  .item-mode {
+  .item-mode,
+  .item-bets {
     font-size: 12px;
     margin-top: 5px;
   }

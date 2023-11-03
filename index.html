@@ -15,7 +15,7 @@
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
         <div>
-          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span>
+          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span><br /><span class="item-update-time">update time: <b>...</b></span>
         </div>
         <span class="item-message"></span>
       </div>
@@ -23,7 +23,7 @@
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
         <div>
-          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span>
+          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span><br /><span class="item-update-time">update time: <b>...</b></span>
         </div>
         <span class="item-message"></span>
       </div>
@@ -31,7 +31,7 @@
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
         <div>
-          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span>
+          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span><br /><span class="item-update-time">update time: <b>...</b></span>
         </div>
         <span class="item-message"></span>
       </div>
@@ -39,7 +39,7 @@
         <span class="item-name">data requesting</span>
         <span class="item-fund">Loading...</span>
         <div>
-          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span>
+          <span class="item-mode">mode: <b>...</b></span><span class="item-bets">bets: <b>...</b></span><br /><span class="item-update-time">update time: <b>...</b></span>
         </div>
         <span class="item-message"></span>
       </div>
@@ -77,6 +77,7 @@
           $(`#item-${data.live_id} .item-fund`).text(parseFloat(data.fund).toFixed(8));
           $(`#item-${data.live_id} .item-mode b`).text(data.mode_name);
           $(`#item-${data.live_id} .item-bets b`).text(data.bet_count);
+          $(`#item-${data.live_id} .item-update-time b`).text(data.update_time);
 
           if (data.message == '') {
             if ($(`#item-${data.live_id}`).hasClass('warning')) {

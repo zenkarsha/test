@@ -60,6 +60,13 @@ body {
   margin-left: 20px;
 }
 
+.item-update-time {
+  display: inline-block;
+  font-size: 18px;
+  color: #999;
+  margin-top: 10px;
+}
+
 .item-message {
   position: absolute;
   top: 10px;
@@ -99,7 +106,8 @@ body {
   }
 
   .item-mode,
-  .item-bets {
+  .item-bets,
+  .item-update-time {
     font-size: 12px;
     margin-top: 5px;
   }

@@ -45,6 +45,10 @@ body {
   color: #fff;
 }
 
+.item-fund.large {
+  font-size: 100px;
+}
+
 .item-mode {
   display: inline-block;
   font-size: 18px;

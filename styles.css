@@ -28,7 +28,7 @@ body {
   border-left: 1px solid #333;
 }
 
-.container > .item.price {
+.container .item.price {
   height: 100vh;
 }
 

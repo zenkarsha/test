@@ -10,7 +10,7 @@ body {
   width: 100vw;
   height: 100svh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 

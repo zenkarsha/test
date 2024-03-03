@@ -16,23 +16,38 @@
         <span class="item-fund large">Loading...</span>
       </div>
       <div class="item flex price" id="item-2">
+        <span class="item-name">ETH PRICE</span>
+        <span class="item-fund large">Loading...</span>
+      </div>
+      <div class="item flex price" id="item-3">
         <span class="item-name">DOGE PRICE</span>
+        <span class="item-fund large">Loading...</span>
+      </div>
+      <div class="item flex price" id="item-4">
+        <span class="item-name">PEPE PRICE</span>
         <span class="item-fund large">Loading...</span>
       </div>
     </div>
     <script type="text/javascript">
       function getPrice() {
-        var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin&vs_currencies=usd';
+        // var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin&vs_currencies=usd';
+        var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,pepe&vs_currencies=usd';
 
         $.getJSON(url, function(data) {
           $(`#item-1`).addClass('refresh');
           $(`#item-1 .item-fund`).text(parseFloat(data.bitcoin.usd).toFixed(4));
           $(`#item-2`).addClass('refresh');
-          $(`#item-2 .item-fund`).text(parseFloat(data.dogecoin.usd).toFixed(8));
+          $(`#item-2 .item-fund`).text(parseFloat(data.ethereum.usd).toFixed(5));
+          $(`#item-3`).addClass('refresh');
+          $(`#item-3 .item-fund`).text(parseFloat(data.dogecoin.usd).toFixed(8));
+          $(`#item-4`).addClass('refresh');
+          $(`#item-4 .item-fund`).text(parseFloat(data.pepe.usd).toFixed(8));
 
           window.setTimeout( function() {
             $(`#item-1`).removeClass('refresh');
             $(`#item-2`).removeClass('refresh');
+            $(`#item-3`).removeClass('refresh');
+            $(`#item-4`).removeClass('refresh');
           }, 500);
 
           window.setTimeout( function() {

@@ -35,11 +35,11 @@
 
         $.getJSON(url, function (data) {
           $(`#item-1`).addClass('refresh');
-          $(`#item-1 .item-fund`).text(parseFloat(data.bitcoin.usd).toFixed(4));
+          $(`#item-1 .item-fund`).text(parseFloat(data.bitcoin.usd));
           $(`#item-2`).addClass('refresh');
-          $(`#item-2 .item-fund`).text(parseFloat(data.ethereum.usd).toFixed(5));
+          $(`#item-2 .item-fund`).text(parseFloat(data.ethereum.usd).toFixed(2));
           $(`#item-3`).addClass('refresh');
-          $(`#item-3 .item-fund`).text(parseFloat(data.dogecoin.usd).toFixed(8));
+          $(`#item-3 .item-fund`).text(parseFloat(data.dogecoin.usd).toFixed(6));
           $(`#item-4`).addClass('refresh');
           $(`#item-4 .item-fund`).text(parseFloat(data.pepe.usd).toFixed(8));
 

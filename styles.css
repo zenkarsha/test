@@ -10,7 +10,7 @@ body {
   width: 100vw;
   height: 100svh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .container .item.price {
-  height: 100vh;
+  height: 33.3333%;
 }
 
 .flex {
@@ -50,7 +50,7 @@ body {
 }
 
 .item-fund.large {
-  font-size: 60px;
+  font-size: 6.66rem;
 }
 
 .item-mode {

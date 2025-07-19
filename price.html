@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>live</title>
-    <link rel="stylesheet" href="./styles.css?2024030302" />
+    <link rel="stylesheet" href="./styles.css?20245071901" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
   <body>
@@ -27,11 +27,19 @@
         <span class="item-name">PEPE PRICE</span>
         <span class="item-fund large">Loading...</span>
       </div>
+      <div class="item flex price" id="item-5">
+        <span class="item-name">XRP PRICE</span>
+        <span class="item-fund large">Loading...</span>
+      </div>
+      <div class="item flex price" id="item-6">
+        <span class="item-name">BNB PRICE</span>
+        <span class="item-fund large">Loading...</span>
+      </div>
     </div>
     <script type="text/javascript">
       function getPrice() {
         // var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin&vs_currencies=usd';
-        var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,pepe&vs_currencies=usd';
+        var url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,pepe,ripple,binancecoin&vs_currencies=usd';
 
         $.getJSON(url, function (data) {
           $(`#item-1`).addClass('refresh');
@@ -42,12 +50,18 @@
           $(`#item-3 .item-fund`).text(parseFloat(data.dogecoin.usd).toFixed(6));
           $(`#item-4`).addClass('refresh');
           $(`#item-4 .item-fund`).text(parseFloat(data.pepe.usd).toFixed(8));
+          $(`#item-5`).addClass('refresh');
+          $(`#item-5 .item-fund`).text(parseFloat(data.ripple.usd).toFixed(2));
+          $(`#item-6`).addClass('refresh');
+          $(`#item-6 .item-fund`).text(parseFloat(data.binancecoin.usd).toFixed(2));
 
           window.setTimeout(function () {
             $(`#item-1`).removeClass('refresh');
             $(`#item-2`).removeClass('refresh');
             $(`#item-3`).removeClass('refresh');
             $(`#item-4`).removeClass('refresh');
+            $(`#item-5`).removeClass('refresh');
+            $(`#item-6`).removeClass('refresh');
           }, 500);
 
           window.setTimeout(function () {
